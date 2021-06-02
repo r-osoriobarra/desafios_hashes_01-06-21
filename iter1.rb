@@ -14,3 +14,5 @@ ventas = {
     Noviembre: 91000,
     Diciembre: 21000
     }
+
+ventas.each_value {|v| pp v if v > 45000}

@@ -19,3 +19,12 @@ ARGV.each do |search|
     month = ventas.invert[search.to_i]
     pp month ? month : "no encontrado"
 end
+
+#solución con datos repetidos
+ARGV.each do |search|
+    if ventas.values.include? search.to_i
+        ventas.each {|k, v| pp k if v == search.to_i}
+    else
+        pp "no encontrado"
+    end
+end
